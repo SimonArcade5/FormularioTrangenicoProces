@@ -1,0 +1,291 @@
+<html><head><base href="https://websim.creation.engine/transgenic-survey-updated-color-and-limit/">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuestionario de Consumo de Transgénicos Biología 4to ProCes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        h1, h2 {
+            color: #2c3e50;
+        }
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .question {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="radio"] {
+            margin-right: 5px;
+        }
+        button {
+            background-color: #3498db;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #2980b9;
+        }
+        #result, #limitMessage {
+            margin-top: 20px;
+            font-weight: bold;
+            font-size: 18px;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+        }
+        .low-consumption {
+            background-color: #e6ffe6;
+            color: #008000;
+        }
+        .medium-consumption {
+            background-color: #ffffcc;
+            color: #808000;
+        }
+        .high-consumption {
+            background-color: #ffe6e6;
+            color: #800000;
+        }
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+            form {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>cuestionrio de Consumo de Transgénicos Biología 4to año ProCes</h1>
+    <div id="limitMessage" style="display: none;"></div>
+    <form id="transgenicSurvey">
+        <h2>Sección 1: Conocimiento sobre Transgénicos</h2>
+        <div class="question">
+            <p>1. ¿Has oído hablar del término "organismo genéticamente modificado" (OGM) o transgénico?</p>
+            <!-- Puntuación: Sí (0 puntos), No (1 puntos), No estoy seguro (2 puntos) -->
+            <label><input type="radio" name="q1" value="0" required> Sí</label>
+            <label><input type="radio" name="q1" value="1"> No</label>
+            <label><input type="radio" name="q1" value="2"> No estoy seguro</label>
+        </div>
+        <div class="question">
+            <p>2. Si has oído hablar de los transgénicos, ¿crees que entiendes qué son?</p>
+            <!-- Puntuación: Sí, lo entiendo completamente (0 puntos), Lo he oído, pero no estoy seguro (1 punto), No, no tengo idea (2 puntos) -->
+            <label><input type="radio" name="q2" value="0" required> Sí, lo entiendo completamente</label>
+            <label><input type="radio" name="q2" value="1"> Lo he oído, pero no estoy seguro de lo que significa</label>
+            <label><input type="radio" name="q2" value="2"> No, no tengo idea de qué es</label>
+        </div>
+        <div class="question">
+            <p>3. ¿Sabes si en Uruguay se permite el uso de transgénicos en alimentos?</p>
+            <!-- Puntuación: Sí (0 puntos), No (2 puntos), No lo sé (2 punto) -->
+            <label><input type="radio" name="q3" value="0" required> Sí</label>
+            <label><input type="radio" name="q3" value="2"> No</label>
+            <label><input type="radio" name="q3" value="2"> No lo sé</label>
+        </div>
+        <div class="question">
+            <p>4. ¿Consideras que los transgénicos pueden estar presentes en los alimentos que consumes habitualmente?</p>
+            <!-- Puntuación: Sí (0 puntos), No (1 puntos), No lo sé (2 punto) -->
+            <label><input type="radio" name="q4" value="0" required> Sí</label>
+            <label><input type="radio" name="q4" value="1"> No</label>
+            <label><input type="radio" name="q4" value="2"> No lo sé</label>
+        </div>
+
+        <h2>Sección 2: Hábitos de Consumo</h2>
+        <div class="question">
+            <p>5. Cuando compras alimentos, ¿te fijas en si están etiquetados como "libres de transgénicos"?</p>
+            <!-- Puntuación: Siempre (0 puntos), A veces (1 punto), Rara vez (2 puntos), Nunca (3 puntos) -->
+            <label><input type="radio" name="q5" value="0" required> Siempre</label>
+            <label><input type="radio" name="q5" value="1"> A veces</label>
+            <label><input type="radio" name="q5" value="2"> Rara vez</label>
+            <label><input type="radio" name="q5" value="3"> Nunca</label>
+        </div>
+        <div class="question">
+            <p>6. ¿Con qué frecuencia consumes productos de soja (como leche de soja, aceite de soja, salsa de soja, etc.)?</p>
+            <!-- Puntuación: Nunca (0 puntos), Rara vez (1 punto), A menudo (2 puntos), Siempre (3 puntos) -->
+            <label><input type="radio" name="q6" value="0" required> Nunca</label>
+            <label><input type="radio" name="q6" value="1"> Rara vez</label>
+            <label><input type="radio" name="q6" value="2"> A menudo</label>
+            <label><input type="radio" name="q6" value="3"> Siempre</label>
+        </div>
+        <div class="question">
+            <p>7. ¿Con qué frecuencia consumes productos derivados del maíz (como harina de maíz, Fécula de Maíz, cereales, etc.)?</p>
+            <!-- Puntuación: Nunca (0 puntos), Rara vez (1 punto), A menudo (2 puntos), Siempre (3 puntos) -->
+            <label><input type="radio" name="q7" value="0" required> Nunca</label>
+            <label><input type="radio" name="q7" value="1"> Rara vez</label>
+            <label><input type="radio" name="q7" value="2"> A menudo</label>
+            <label><input type="radio" name="q7" value="3"> Siempre</label>
+        </div>
+        <div class="question">
+            <p>8. ¿Sueles comprar alimentos procesados o envasados (snacks, galletas, alimentos congelados, etc.)?</p>
+            <!-- Puntuación: Nunca (0 puntos), Rara vez (1 punto), A menudo (2 puntos), Siempre (3 puntos) -->
+            <label><input type="radio" name="q8" value="0" required> Nunca</label>
+            <label><input type="radio" name="q8" value="1"> Rara vez</label>
+            <label><input type="radio" name="q8" value="2"> A menudo</label>
+            <label><input type="radio" name="q8" value="3"> Siempre</label>
+        </div>
+        <div class="question">
+            <p>9. Cuando compras carne, ¿te importa saber si los animales han sido alimentados con productos transgénicos (soja o maíz)?</p>
+            <!-- Puntuación: Sí, siempre (0 puntos), A veces (1 punto), Rara vez (2 puntos), No me importa (3 puntos) -->
+            <label><input type="radio" name="q9" value="0" required> Sí, siempre</label>
+            <label><input type="radio" name="q9" value="1"> A veces</label>
+            <label><input type="radio" name="q9" value="2"> Rara vez</label>
+            <label><input type="radio" name="q9" value="3"> No me importa</label>
+        </div>
+
+        <h2>Sección 3: Medicamentos y Suplementos</h2>
+        <div class="question">
+            <p>10. ¿Sabías que algunos medicamentos y suplementos pueden contener ingredientes derivados de organismos genéticamente modificados (OGM)?</p>
+            <!-- Puntuación: Sí (0 puntos), No (2 puntos), No estoy seguro (1 punto) -->
+            <label><input type="radio" name="q10" value="2" required> Sí</label>
+            <label><input type="radio" name="q10" value="0"> No</label>
+            <label><input type="radio" name="q10" value="1"> No estoy seguro</label>
+        </div>
+        <div class="question">
+            <p>11. ¿Revisas si los medicamentos que consumes tienen componentes naturales o derivados de biotecnología?</p>
+            <!-- Puntuación: Siempre (0 puntos), A veces (1 punto), Nunca (2 puntos) -->
+            <label><input type="radio" name="q11" value="0" required> Siempre</label>
+            <label><input type="radio" name="q11" value="1"> A veces</label>
+            <label><input type="radio" name="q11" value="2"> Nunca</label>
+        </div>
+
+        <h2>Sección 4: Vestimenta y Productos Relacionados</h2>
+        <div class="question">
+            <p>12. Cuando compras ropa, ¿prefieres prendas hechas de algodón?</p>
+            <!-- Puntuación: Sí (2 puntos), No (0 puntos), No me fijo (1 punto) -->
+            <label><input type="radio" name="q12" value="2" required> Sí</label>
+            <label><input type="radio" name="q12" value="0"> No</label>
+            <label><input type="radio" name="q12" value="1"> No me fijo</label>
+        </div>
+        <div class="question">
+            <p>13. ¿Te interesa si la ropa que compras está hecha con algodón orgánico o libre de transgénicos?</p>
+            <!-- Puntuación: Sí, siempre (0 puntos), A veces (1 punto), Rara vez (2 puntos), No me interesa (3 puntos) -->
+            <label><input type="radio" name="q13" value="0" required> Sí, siempre</label>
+            <label><input type="radio" name="q13" value="1"> A veces</label>
+            <label><input type="radio" name="q13" value="2"> Rara vez</label>
+            <label><input type="radio" name="q13" value="3"> No me interesa</label>
+        </div>
+        <div class="question">
+            <p>14. ¿Sabías que algunos productos de cuidado personal como cremas o aceites pueden contener ingredientes derivados de transgénicos?</p>
+            <!-- Puntuación: Sí (2 puntos), No (0 puntos), No estoy seguro (1 punto) -->
+            <label><input type="radio" name="q14" value="2" required> Sí</label>
+            <label><input type="radio" name="q14" value="0"> No</label>
+            <label><input type="radio" name="q14" value="1"> No estoy seguro</label>
+        </div>
+
+        <button type="submit">Enviar encuesta</button>
+    </form>
+
+    <div id="result"></div>
+
+    <script>
+        // Función para obtener la fecha actual en formato ISO
+        function getCurrentDate() {
+            return new Date().toISOString();
+        }
+
+        // Función para verificar si han pasado 24 horas desde la última vez que se completó el formulario
+        function canTakeSurvey() {
+            const lastSurveyDate = localStorage.getItem('lastSurveyDate');
+            if (!lastSurveyDate) return true;
+
+            const lastDate = new Date(lastSurveyDate);
+            const currentDate = new Date();
+            const hoursDiff = (currentDate - lastDate) / (1000 * 60 * 60);
+
+            return hoursDiff >= 24;
+        }
+
+        // Función para mostrar el resultado anterior
+        function showPreviousResult() {
+            const previousScore = localStorage.getItem('lastSurveyScore');
+            const previousLevel = localStorage.getItem('lastSurveyLevel');
+            const lastSurveyDate = new Date(localStorage.getItem('lastSurveyDate'));
+            const nextAvailableDate = new Date(lastSurveyDate.getTime() + 00 * 60 * 60 * 1000);
+
+            const resultElement = document.getElementById('result');
+            const limitMessageElement = document.getElementById('limitMessage');
+
+            resultElement.innerHTML = `
+                Tu puntaje anterior fue: ${previousScore}<br>
+                Nivel de consumo: ${previousLevel}
+            `;
+            resultElement.className = previousLevel === "Alto consumo de transgénicos" ? "high-consumption" :
+                                      previousLevel === "Consumo medio de transgénicos" ? "medium-consumption" :
+                                      "low-consumption";
+
+            limitMessageElement.innerHTML = `
+                Ya has completado el cuestionarioen<br>
+                Gracias ${nextAvailableDate.toLocaleString()}.
+            `;
+            limitMessageElement.style.display = 'block';
+
+            document.getElementById('transgenicSurvey').style.display = 'none';
+        }
+
+        // Verificar si el usuario puede tomar la encuesta
+        if (!canTakeSurvey()) {
+            showPreviousResult();
+        }
+
+        document.getElementById('transgenicSurvey').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            if (!canTakeSurvey()) {
+                showPreviousResult();
+                return;
+            }
+
+            let totalScore = 0;
+            const form = e.target;
+            for (let i = 1; i <= 14; i++) {
+                const questionName = `q${i}`;
+                const selectedOption = form.elements[questionName].value;
+                totalScore += parseInt(selectedOption);
+            }
+
+            let consumptionLevel, resultClass;
+            if (totalScore > 20) {
+                consumptionLevel = "Alto consumo de transgénicos";
+                resultClass = "high-consumption";
+            } else if (totalScore >= 10) {
+                consumptionLevel = "Consumo medio de transgénicos";
+                resultClass = "medium-consumption";
+            } else {
+                consumptionLevel = "Bajo consumo de transgénicos";
+                resultClass = "low-consumption";
+            }
+
+            const resultElement = document.getElementById('result');
+            resultElement.innerHTML = `
+                Tu puntaje total es: ${totalScore}<br>
+                Nivel de consumo: ${consumptionLevel}
+            `;
+            resultElement.className = resultClass;
+
+            // Guardar los resultados en localStorage
+            localStorage.setItem('lastSurveyDate', getCurrentDate());
+            localStorage.setItem('lastSurveyScore', totalScore);
+            localStorage.setItem('lastSurveyLevel', consumptionLevel);
+
+            // Ocultar el formulario después de enviarlo
+            form.style.display = 'none';
+        });
+    </script>
+</body></html>
